@@ -1,0 +1,2029 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ModHooks
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ModHooks
+   ">
+    <meta name="generator" content="docfx 2.58.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Modding.ModHooks">
+  
+  
+  <h1 id="Modding_ModHooks" data-uid="Modding.ModHooks" class="text-break">Class ModHooks
+  </h1>
+  <div class="markdown level0 summary"><p>Class to hook into various events for the game.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">ModHooks</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Modding.html">Modding</a></h6>
+  <h6><strong>Assembly</strong>: Assembly-CSharp.mm.dll</h6>
+  <h5 id="Modding_ModHooks_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class ModHooks</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="Modding_ModHooks_LoadedModsWithVersions" data-uid="Modding.ModHooks.LoadedModsWithVersions">LoadedModsWithVersions</h4>
+  <div class="markdown level1 summary"><p>Dictionary of mods and their version #s</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly Dictionary&lt;string, string&gt; LoadedModsWithVersions</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.Dictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Modding_ModHooks_ModVersion" data-uid="Modding.ModHooks.ModVersion">ModVersion</h4>
+  <div class="markdown level1 summary"><p>The Version of the Modding API</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string ModVersion</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Modding_ModHooks_version" data-uid="Modding.ModHooks.version">version</h4>
+  <div class="markdown level1 summary"><p>Version of the Game</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static GameVersionData version</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">GameVersionData</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Modding_ModHooks_BuiltModMenuScreens_" data-uid="Modding.ModHooks.BuiltModMenuScreens*"></a>
+  <h4 id="Modding_ModHooks_BuiltModMenuScreens" data-uid="Modding.ModHooks.BuiltModMenuScreens">BuiltModMenuScreens</h4>
+  <div class="markdown level1 summary"><p>A map of mods to their built menu screens.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ReadOnlyDictionary&lt;IMod, MenuScreen&gt; BuiltModMenuScreens { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.ObjectModel.ReadOnlyDictionary</span>&lt;<a class="xref" href="Modding.IMod.html">IMod</a>, <span class="xref">MenuScreen</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Modding_ModHooks_GlobalSettings_" data-uid="Modding.ModHooks.GlobalSettings*"></a>
+  <h4 id="Modding_ModHooks_GlobalSettings" data-uid="Modding.ModHooks.GlobalSettings">GlobalSettings</h4>
+  <div class="markdown level1 summary"><p>The global ModHooks settings.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ModHooksGlobalSettings GlobalSettings { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Modding.ModHooksGlobalSettings.html">ModHooksGlobalSettings</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Modding_ModHooks_Instance_" data-uid="Modding.ModHooks.Instance*"></a>
+  <h4 id="Modding_ModHooks_Instance" data-uid="Modding.ModHooks.Instance">Instance</h4>
+  <div class="markdown level1 summary"><p>Current instance of Modhooks.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;All members of ModHooks are now static, use the type name instead.&quot;)]
+public static ModHooks Instance { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Modding.ModHooks.html">ModHooks</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Modding_ModHooks_GetAllMods_" data-uid="Modding.ModHooks.GetAllMods*"></a>
+  <h4 id="Modding_ModHooks_GetAllMods_System_Boolean_System_Boolean_" data-uid="Modding.ModHooks.GetAllMods(System.Boolean,System.Boolean)">GetAllMods(Boolean, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Returns an iterator over all mods.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;IMod&gt; GetAllMods(bool onlyEnabled = false, bool allowLoadError = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">onlyEnabled</span></td>
+        <td><p>Should the iterator only contain enabled mods.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">allowLoadError</span></td>
+        <td><p>Should the iterator contain mods which have load errors.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Modding.IMod.html">IMod</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Modding_ModHooks_GetMod_" data-uid="Modding.ModHooks.GetMod*"></a>
+  <h4 id="Modding_ModHooks_GetMod_System_String_System_Boolean_System_Boolean_" data-uid="Modding.ModHooks.GetMod(System.String,System.Boolean,System.Boolean)">GetMod(String, Boolean, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Gets a mod instance by name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IMod GetMod(string name, bool onlyEnabled = false, bool allowLoadError = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The name of the mod.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">onlyEnabled</span></td>
+        <td><p>Should the method only return the mod if it is enabled.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">allowLoadError</span></td>
+        <td><p>Should the method return the mod even if it had load errors.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Modding.IMod.html">IMod</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Modding_ModHooks_GetMod_" data-uid="Modding.ModHooks.GetMod*"></a>
+  <h4 id="Modding_ModHooks_GetMod_System_Type_System_Boolean_System_Boolean_" data-uid="Modding.ModHooks.GetMod(System.Type,System.Boolean,System.Boolean)">GetMod(Type, Boolean, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Gets a mod instance by type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IMod GetMod(Type type, bool onlyEnabled = false, bool allowLoadError = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>The type of the mod.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">onlyEnabled</span></td>
+        <td><p>Should the method only return the mod if it is enabled.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">allowLoadError</span></td>
+        <td><p>Should the method return the mod even if it had load errors.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Modding.IMod.html">IMod</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Modding_ModHooks_ModEnabled_" data-uid="Modding.ModHooks.ModEnabled*"></a>
+  <h4 id="Modding_ModHooks_ModEnabled_Modding_ITogglableMod_" data-uid="Modding.ModHooks.ModEnabled(Modding.ITogglableMod)">ModEnabled(ITogglableMod)</h4>
+  <div class="markdown level1 summary"><p>Gets if the mod is currently enabled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool ModEnabled(ITogglableMod mod)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Modding.ITogglableMod.html">ITogglableMod</a></td>
+        <td><span class="parametername">mod</span></td>
+        <td><p>The togglable mod to check.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Modding_ModHooks_ModEnabled_" data-uid="Modding.ModHooks.ModEnabled*"></a>
+  <h4 id="Modding_ModHooks_ModEnabled_System_String_" data-uid="Modding.ModHooks.ModEnabled(System.String)">ModEnabled(String)</h4>
+  <div class="markdown level1 summary"><p>Gets if a mod is currently enabled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool ModEnabled(string name)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The name of the mod to check.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Modding_ModHooks_ModEnabled_" data-uid="Modding.ModHooks.ModEnabled*"></a>
+  <h4 id="Modding_ModHooks_ModEnabled_System_Type_" data-uid="Modding.ModHooks.ModEnabled(System.Type)">ModEnabled(Type)</h4>
+  <div class="markdown level1 summary"><p>Gets if a mod is currently enabled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool ModEnabled(Type type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>The type of the mod to check.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="events">Events
+  </h3>
+  
+  
+  <h4 id="Modding_ModHooks_AfterAttackHook" data-uid="Modding.ModHooks.AfterAttackHook">AfterAttackHook</h4>
+  <div class="markdown level1 summary"><p>Called at the end of the attack function</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static event Action&lt;AttackDirection&gt; AfterAttackHook</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<span class="xref">AttackDirection</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Modding_ModHooks_AfterAttackHook_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>HeroController.Attack</p>
+</div>
+  
+  
+  <h4 id="Modding_ModHooks_AfterPlayerDeadHook" data-uid="Modding.ModHooks.AfterPlayerDeadHook">AfterPlayerDeadHook</h4>
+  <div class="markdown level1 summary"><p>Called after the player dies</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static event Action AfterPlayerDeadHook</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Modding_ModHooks_AfterPlayerDeadHook_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>GameManager.PlayerDead</p>
+</div>
+  
+  
+  <h4 id="Modding_ModHooks_AfterSaveGameClearHook" data-uid="Modding.ModHooks.AfterSaveGameClearHook">AfterSaveGameClearHook</h4>
+  <div class="markdown level1 summary"><p>Called after a game has been cleared from a slot.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static event Action&lt;int&gt; AfterSaveGameClearHook</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Modding_ModHooks_AfterSavegameLoadHook" data-uid="Modding.ModHooks.AfterSavegameLoadHook">AfterSavegameLoadHook</h4>
+  <div class="markdown level1 summary"><p>Called directly after a save has been loaded.  Allows for accessing SaveGame instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static event Action&lt;SaveGameData&gt; AfterSavegameLoadHook</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<span class="xref">SaveGameData</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Modding_ModHooks_AfterSavegameLoadHook_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>GameManager.LoadGame</p>
+</div>
+  
+  
+  <h4 id="Modding_ModHooks_AfterTakeDamageHook" data-uid="Modding.ModHooks.AfterTakeDamageHook">AfterTakeDamageHook</h4>
+  <div class="markdown level1 summary"><p>Called at the end of the take damage function</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static event AfterTakeDamageHandler AfterTakeDamageHook</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Modding.AfterTakeDamageHandler.html">AfterTakeDamageHandler</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Modding_ModHooks_ApplicationQuitHook" data-uid="Modding.ModHooks.ApplicationQuitHook">ApplicationQuitHook</h4>
+  <div class="markdown level1 summary"><p>Called when the game is fully closed</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static event Action ApplicationQuitHook</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Modding_ModHooks_ApplicationQuitHook_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>GameManager.OnApplicationQuit</p>
+</div>
+  
+  
+  <h4 id="Modding_ModHooks_AttackHook" data-uid="Modding.ModHooks.AttackHook">AttackHook</h4>
+  <div class="markdown level1 summary"><p>Called whenever the player attacks</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static event Action&lt;AttackDirection&gt; AttackHook</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<span class="xref">AttackDirection</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Modding_ModHooks_AttackHook_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>HeroController.Attack</p>
+</div>
+  
+  
+  <h4 id="Modding_ModHooks_BeforeAddHealthHook" data-uid="Modding.ModHooks.BeforeAddHealthHook">BeforeAddHealthHook</h4>
+  <div class="markdown level1 summary"><p>Called whenever the player heals, overrides health added.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static event Func&lt;int, int&gt; BeforeAddHealthHook</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;<span class="xref">System.Int32</span>, <span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Modding_ModHooks_BeforeAddHealthHook_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>PlayerData.health</p>
+</div>
+  
+  
+  <h4 id="Modding_ModHooks_BeforePlayerDeadHook" data-uid="Modding.ModHooks.BeforePlayerDeadHook">BeforePlayerDeadHook</h4>
+  <div class="markdown level1 summary"><p>Called when the player dies</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static event Action BeforePlayerDeadHook</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Modding_ModHooks_BeforePlayerDeadHook_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>GameManager.PlayerDead</p>
+</div>
+  
+  
+  <h4 id="Modding_ModHooks_BeforeSavegameSaveHook" data-uid="Modding.ModHooks.BeforeSavegameSaveHook">BeforeSavegameSaveHook</h4>
+  <div class="markdown level1 summary"><p>Called directly before save has been saved to allow for changes to the data before persisted.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static event Action&lt;SaveGameData&gt; BeforeSavegameSaveHook</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<span class="xref">SaveGameData</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Modding_ModHooks_BeforeSavegameSaveHook_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>GameManager.SaveGame</p>
+</div>
+  
+  
+  <h4 id="Modding_ModHooks_BeforeSceneLoadHook" data-uid="Modding.ModHooks.BeforeSceneLoadHook">BeforeSceneLoadHook</h4>
+  <div class="markdown level1 summary"><p>Called right before a scene gets loaded, can change which scene gets loaded</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static event Func&lt;string, string&gt; BeforeSceneLoadHook</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Modding_ModHooks_BeforeSceneLoadHook_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>N/A</p>
+</div>
+  
+  
+  <h4 id="Modding_ModHooks_BlueHealthHook" data-uid="Modding.ModHooks.BlueHealthHook">BlueHealthHook</h4>
+  <div class="markdown level1 summary"><p>Called whenever blue health is updated</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static event Func&lt;int&gt; BlueHealthHook</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Modding_ModHooks_CharmUpdateHook" data-uid="Modding.ModHooks.CharmUpdateHook">CharmUpdateHook</h4>
+  <div class="markdown level1 summary"><p>Called after player values for charms have been set</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static event CharmUpdateHandler CharmUpdateHook</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Modding.CharmUpdateHandler.html">CharmUpdateHandler</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Modding_ModHooks_CharmUpdateHook_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>HeroController.CharmUpdate</p>
+</div>
+  
+  
+  <h4 id="Modding_ModHooks_ColliderCreateHook" data-uid="Modding.ModHooks.ColliderCreateHook">ColliderCreateHook</h4>
+  <div class="markdown level1 summary"><p>Called whenever a new gameobject is created with a collider and playmaker2d</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static event Action&lt;GameObject&gt; ColliderCreateHook</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<span class="xref">GameObject</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Modding_ModHooks_ColliderCreateHook_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>PlayMakerUnity2DProxy.Start</p>
+</div>
+  
+  
+  <h4 id="Modding_ModHooks_CursorHook" data-uid="Modding.ModHooks.CursorHook">CursorHook</h4>
+  <div class="markdown level1 summary"><p>Called whenever game tries to show cursor</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static event Action CursorHook</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Modding_ModHooks_DashPressedHook" data-uid="Modding.ModHooks.DashPressedHook">DashPressedHook</h4>
+  <div class="markdown level1 summary"><p>Called whenever the dash key is pressed.
+Returns whether or not to override normal dash functionality - if true, preventing a normal dash</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static event Func&lt;bool&gt; DashPressedHook</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Modding_ModHooks_DashPressedHook_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>HeroController.LookForQueueInput</p>
+</div>
+  
+  
+  <h4 id="Modding_ModHooks_DashVectorHook" data-uid="Modding.ModHooks.DashVectorHook">DashVectorHook</h4>
+  <div class="markdown level1 summary"><p>Called during dash function to change velocity</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static event Func&lt;Vector2, Vector2&gt; DashVectorHook</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;<span class="xref">Vector2</span>, <span class="xref">Vector2</span>&gt;</td>
+        <td><p>A changed vector.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Modding_ModHooks_DashVectorHook_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>HeroController.Dash</p>
+</div>
+  
+  
+  <h4 id="Modding_ModHooks_DoAttackHook" data-uid="Modding.ModHooks.DoAttackHook">DoAttackHook</h4>
+  <div class="markdown level1 summary"><p>Called at the start of the DoAttack function</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static event Action DoAttackHook</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Modding_ModHooks_DrawBlackBordersHook" data-uid="Modding.ModHooks.DrawBlackBordersHook">DrawBlackBordersHook</h4>
+  <div class="markdown level1 summary"><p>Called when a SceneManager calls DrawBlackBorders and creates boarders for a scene. You may use or modify the
+bounds of an area of the scene with these.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static event Action&lt;List&lt;GameObject&gt;&gt; DrawBlackBordersHook</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">GameObject</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Modding_ModHooks_DrawBlackBordersHook_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>SceneManager.DrawBlackBorders</p>
+</div>
+  
+  
+  <h4 id="Modding_ModHooks_FocusCostHook" data-uid="Modding.ModHooks.FocusCostHook">FocusCostHook</h4>
+  <div class="markdown level1 summary"><p>Called whenever focus cost is calculated, allows a focus cost multiplier.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static event Func&lt;float&gt; FocusCostHook</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;<span class="xref">System.Single</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Modding_ModHooks_GetPlayerBoolHook" data-uid="Modding.ModHooks.GetPlayerBoolHook">GetPlayerBoolHook</h4>
+  <div class="markdown level1 summary"><p>Called when anything in the game tries to get a bool from player data</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static event GetBoolProxy GetPlayerBoolHook</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Modding.GetBoolProxy.html">GetBoolProxy</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Modding_ModHooks_GetPlayerBoolHook_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>PlayerData.GetBool</p>
+</div>
+  <h5 id="Modding_ModHooks_GetPlayerBoolHook_examples">Examples</h5>
+  <pre><code>ModHooks.GetPlayerBoolHook += GetBool;
+
+// In this example, we always give the player dash, and
+// leave other bools as-is.
+bool? GetBool(string name, bool orig) {
+    return name == &quot;canDash&quot; ? true : orig;
+}</code></pre>
+
+  
+  
+  <h4 id="Modding_ModHooks_GetPlayerFloatHook" data-uid="Modding.ModHooks.GetPlayerFloatHook">GetPlayerFloatHook</h4>
+  <div class="markdown level1 summary"><p>Called when anything in the game tries to get a float from player data</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static event GetFloatProxy GetPlayerFloatHook</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Modding.GetFloatProxy.html">GetFloatProxy</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Modding_ModHooks_GetPlayerFloatHook_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>PlayerData.GetFloat</p>
+</div>
+  
+  
+  <h4 id="Modding_ModHooks_GetPlayerIntHook" data-uid="Modding.ModHooks.GetPlayerIntHook">GetPlayerIntHook</h4>
+  <div class="markdown level1 summary"><p>Called when anything in the game tries to get an int from player data</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static event GetIntProxy GetPlayerIntHook</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Modding.GetIntProxy.html">GetIntProxy</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Modding_ModHooks_GetPlayerIntHook_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>PlayerData.GetInt</p>
+</div>
+  <h5 id="Modding_ModHooks_GetPlayerIntHook_examples">Examples</h5>
+  <pre><code>ModHooks.GetPlayerIntHook += GetInt;
+
+// This overrides the number of charm slots we have to 999,
+// effectively giving us infinite charm notches.
+// We ignore any other GetInt calls.
+int? GetInt(string name, int orig) {
+    return name == &quot;charmSlots&quot; ? 999 : orig;
+}</code></pre>
+
+  
+  
+  <h4 id="Modding_ModHooks_GetPlayerStringHook" data-uid="Modding.ModHooks.GetPlayerStringHook">GetPlayerStringHook</h4>
+  <div class="markdown level1 summary"><p>Called when anything in the game tries to get a string from player data</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static event GetStringProxy GetPlayerStringHook</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Modding.GetStringProxy.html">GetStringProxy</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Modding_ModHooks_GetPlayerStringHook_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>PlayerData.GetString</p>
+</div>
+  
+  
+  <h4 id="Modding_ModHooks_GetPlayerVariableHook" data-uid="Modding.ModHooks.GetPlayerVariableHook">GetPlayerVariableHook</h4>
+  <div class="markdown level1 summary"><p>Called when anything in the game tries to get a generic variable from player data</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static event GetVariableProxy GetPlayerVariableHook</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Modding.GetVariableProxy.html">GetVariableProxy</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Modding_ModHooks_GetPlayerVariableHook_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>PlayerData.GetVariable</p>
+</div>
+  
+  
+  <h4 id="Modding_ModHooks_GetPlayerVector3Hook" data-uid="Modding.ModHooks.GetPlayerVector3Hook">GetPlayerVector3Hook</h4>
+  <div class="markdown level1 summary"><p>Called when anything in the game tries to get a Vector3 from player data</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static event GetVector3Proxy GetPlayerVector3Hook</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Modding.GetVector3Proxy.html">GetVector3Proxy</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Modding_ModHooks_GetPlayerVector3Hook_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>PlayerData.GetVector3</p>
+</div>
+  
+  
+  <h4 id="Modding_ModHooks_GetSaveFileNameHook" data-uid="Modding.ModHooks.GetSaveFileNameHook">GetSaveFileNameHook</h4>
+  <div class="markdown level1 summary"><p>Overrides the filename to load for a given slot.  Return null to use vanilla names.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static event Func&lt;int, string&gt; GetSaveFileNameHook</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;<span class="xref">System.Int32</span>, <span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Modding_ModHooks_HeroUpdateHook" data-uid="Modding.ModHooks.HeroUpdateHook">HeroUpdateHook</h4>
+  <div class="markdown level1 summary"><p>Called whenever the hero updates</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static event Action HeroUpdateHook</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Modding_ModHooks_HeroUpdateHook_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>HeroController.Update</p>
+</div>
+  
+  
+  <h4 id="Modding_ModHooks_HitInstanceHook" data-uid="Modding.ModHooks.HitInstanceHook">HitInstanceHook</h4>
+  <div class="markdown level1 summary"><p>Called whenever a HitInstance is created. Overrides hit.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static event HitInstanceHandler HitInstanceHook</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Modding.HitInstanceHandler.html">HitInstanceHandler</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Modding_ModHooks_LanguageGetHook" data-uid="Modding.ModHooks.LanguageGetHook">LanguageGetHook</h4>
+  <div class="markdown level1 summary"><p>Called whenever localization specific strings are requested</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static event LanguageGetProxy LanguageGetHook</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Modding.LanguageGetProxy.html">LanguageGetProxy</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Modding_ModHooks_LanguageGetHook_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>N/A</p>
+</div>
+  
+  
+  <h4 id="Modding_ModHooks_NewGameHook" data-uid="Modding.ModHooks.NewGameHook">NewGameHook</h4>
+  <div class="markdown level1 summary"><p>Called whenever a new game is started</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static event Action NewGameHook</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Modding_ModHooks_NewGameHook_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>GameManager.LoadFirstScene</p>
+</div>
+  
+  
+  <h4 id="Modding_ModHooks_ObjectPoolSpawnHook" data-uid="Modding.ModHooks.ObjectPoolSpawnHook">ObjectPoolSpawnHook</h4>
+  <div class="markdown level1 summary"><p>Called whenever game tries to create a new gameobject.  This happens often, care should be taken.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static event Func&lt;GameObject, GameObject&gt; ObjectPoolSpawnHook</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;<span class="xref">GameObject</span>, <span class="xref">GameObject</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Modding_ModHooks_OnEnableEnemyHook" data-uid="Modding.ModHooks.OnEnableEnemyHook">OnEnableEnemyHook</h4>
+  <div class="markdown level1 summary"><p>Called when an enemy is enabled. Check this isDead flag to see if they're already dead. If you return true, this
+will mark the enemy as already dead on load. Default behavior is to return the value inside &quot;isAlreadyDead&quot;.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static event OnEnableEnemyHandler OnEnableEnemyHook</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Modding.OnEnableEnemyHandler.html">OnEnableEnemyHandler</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Modding_ModHooks_OnEnableEnemyHook_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>HealthManager.CheckPersistence</p>
+</div>
+  
+  
+  <h4 id="Modding_ModHooks_OnReceiveDeathEventHook" data-uid="Modding.ModHooks.OnReceiveDeathEventHook">OnReceiveDeathEventHook</h4>
+  <div class="markdown level1 summary"><p>Called when an enemy recieves a death event. It looks like this event may be called multiple times on an enemy, so
+check &quot;eventAlreadyRecieved&quot; to see if the event has been fired more than once.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static event OnReceiveDeathEventHandler OnReceiveDeathEventHook</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Modding.OnReceiveDeathEventHandler.html">OnReceiveDeathEventHandler</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Modding_ModHooks_OnReceiveDeathEventHook_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>EnemyDeathEffects.RecieveDeathEvent</p>
+</div>
+  
+  
+  <h4 id="Modding_ModHooks_RecordKillForJournalHook" data-uid="Modding.ModHooks.RecordKillForJournalHook">RecordKillForJournalHook</h4>
+  <div class="markdown level1 summary"><p>Called when an enemy dies and a journal kill is recorded. You may use the &quot;playerDataName&quot; string or one of the
+additional pre-formatted player data strings to look up values in playerData.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static event RecordKillForJournalHandler RecordKillForJournalHook</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Modding.RecordKillForJournalHandler.html">RecordKillForJournalHandler</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Modding_ModHooks_RecordKillForJournalHook_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>EnemyDeathEffects.OnRecordKillForJournal</p>
+</div>
+  
+  
+  <h4 id="Modding_ModHooks_SavegameClearHook" data-uid="Modding.ModHooks.SavegameClearHook">SavegameClearHook</h4>
+  <div class="markdown level1 summary"><p>Called before a save file is deleted</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static event Action&lt;int&gt; SavegameClearHook</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Modding_ModHooks_SavegameClearHook_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>GameManager.ClearSaveFile</p>
+</div>
+  
+  
+  <h4 id="Modding_ModHooks_SavegameLoadHook" data-uid="Modding.ModHooks.SavegameLoadHook">SavegameLoadHook</h4>
+  <div class="markdown level1 summary"><p>Called directly after a save has been loaded</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static event Action&lt;int&gt; SavegameLoadHook</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Modding_ModHooks_SavegameLoadHook_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>GameManager.LoadGame</p>
+</div>
+  
+  
+  <h4 id="Modding_ModHooks_SavegameSaveHook" data-uid="Modding.ModHooks.SavegameSaveHook">SavegameSaveHook</h4>
+  <div class="markdown level1 summary"><p>Called directly after a save has been saved</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static event Action&lt;int&gt; SavegameSaveHook</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Modding_ModHooks_SavegameSaveHook_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>GameManager.SaveGame</p>
+</div>
+  
+  
+  <h4 id="Modding_ModHooks_SceneChanged" data-uid="Modding.ModHooks.SceneChanged">SceneChanged</h4>
+  <div class="markdown level1 summary"><p>Called after a new Scene has been loaded</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static event Action&lt;string&gt; SceneChanged</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Modding_ModHooks_SceneChanged_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>N/A</p>
+</div>
+  
+  
+  <h4 id="Modding_ModHooks_SetPlayerBoolHook" data-uid="Modding.ModHooks.SetPlayerBoolHook">SetPlayerBoolHook</h4>
+  <div class="markdown level1 summary"><p>Called when anything in the game tries to set a bool in player data</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static event SetBoolProxy SetPlayerBoolHook</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Modding.SetBoolProxy.html">SetBoolProxy</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Modding_ModHooks_SetPlayerBoolHook_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>PlayerData.SetBool</p>
+</div>
+  <h5 id="Modding_ModHooks_SetPlayerBoolHook_examples">Examples</h5>
+  <pre><code>public int KillCount { get; set; }
+
+ModHooks.Instance.SetPlayerBoolHook += SetBool;
+
+/*
+ * This uses the bool set to trigger a death, killing the player
+ * as well as preventing them from picking up dash, which could be used
+ * in something like a dashless mod.
+ *
+ * We are also able to use SetBool for counting things, as it is often
+ * called every time sometthing happens, regardless of the value
+ * this can be seen in our check for &quot;killedMageLord&quot;, which counts the
+ * number of times the player kills Soul Master with the mod on.
+ */
+bool SetBool(string name, bool orig) {
+    switch (name) {
+        case &quot;hasDash&quot;:
+            var hc = HeroController.instance;
+
+            // Kill the player
+            hc.StartCoroutine(hc.Die());
+
+            // Prevent dash from being picked up
+            return false;
+        case &quot;killedMageLord&quot;:
+            // Just increment the counter.
+            KillCount++;
+
+            // We could also do something like award them geo for each kill
+            // And despite being a set, this would trigger on *every* kill
+            HeroController.instance.AddGeo(300);
+
+            // Not changing the value.
+            return orig;
+        default:
+            return orig;
+    }
+}</code></pre>
+
+  
+  
+  <h4 id="Modding_ModHooks_SetPlayerFloatHook" data-uid="Modding.ModHooks.SetPlayerFloatHook">SetPlayerFloatHook</h4>
+  <div class="markdown level1 summary"><p>Called when anything in the game tries to set a float in player data</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static event SetFloatProxy SetPlayerFloatHook</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Modding.SetFloatProxy.html">SetFloatProxy</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Modding_ModHooks_SetPlayerFloatHook_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>PlayerData.SetFloat</p>
+</div>
+  
+  
+  <h4 id="Modding_ModHooks_SetPlayerIntHook" data-uid="Modding.ModHooks.SetPlayerIntHook">SetPlayerIntHook</h4>
+  <div class="markdown level1 summary"><p>Called when anything in the game tries to set an int in player data</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static event SetIntProxy SetPlayerIntHook</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Modding.SetIntProxy.html">SetIntProxy</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Modding_ModHooks_SetPlayerIntHook_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>PlayerData.SetInt</p>
+</div>
+  <h5 id="Modding_ModHooks_SetPlayerIntHook_examples">Examples</h5>
+  <pre><code>ModHooks.Instance.SetPlayerIntHook += SetInt;
+
+int? SetInt(string name, int orig) {
+     // We could do something every time the player 
+     // receives or loses geo.
+    if (name == &quot;geo&quot;) {
+        // Let&apos;s give the player soul if they *gain* geo
+        if (PlayerData.instance.geo &lt; orig) {
+            PlayerData.instance.AddMPChargeSpa(10);
+        }
+    }
+
+    // In this case, we aren&apos;t changing the value being set
+    // at all, so we just leave the value as the original for everything.
+    return orig;
+}</code></pre>
+
+  
+  
+  <h4 id="Modding_ModHooks_SetPlayerStringHook" data-uid="Modding.ModHooks.SetPlayerStringHook">SetPlayerStringHook</h4>
+  <div class="markdown level1 summary"><p>Called when anything in the game tries to set a string in player data</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static event SetStringProxy SetPlayerStringHook</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Modding.SetStringProxy.html">SetStringProxy</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Modding_ModHooks_SetPlayerStringHook_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>PlayerData.SetString</p>
+</div>
+  
+  
+  <h4 id="Modding_ModHooks_SetPlayerVariableHook" data-uid="Modding.ModHooks.SetPlayerVariableHook">SetPlayerVariableHook</h4>
+  <div class="markdown level1 summary"><p>Called when anything in the game tries to set a generic variable in player data</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static event SetVariableProxy SetPlayerVariableHook</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Modding.SetVariableProxy.html">SetVariableProxy</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Modding_ModHooks_SetPlayerVariableHook_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>PlayerData.SetVariable</p>
+</div>
+  
+  
+  <h4 id="Modding_ModHooks_SetPlayerVector3Hook" data-uid="Modding.ModHooks.SetPlayerVector3Hook">SetPlayerVector3Hook</h4>
+  <div class="markdown level1 summary"><p>Called when anything in the game tries to set a Vector3 in player data</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static event SetVector3Proxy SetPlayerVector3Hook</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Modding.SetVector3Proxy.html">SetVector3Proxy</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Modding_ModHooks_SetPlayerVector3Hook_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>PlayerData.SetVector3</p>
+</div>
+  
+  
+  <h4 id="Modding_ModHooks_SlashHitHook" data-uid="Modding.ModHooks.SlashHitHook">SlashHitHook</h4>
+  <div class="markdown level1 summary"><p>Called whenever nail strikes something</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static event SlashHitHandler SlashHitHook</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Modding.SlashHitHandler.html">SlashHitHandler</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Modding_ModHooks_SoulGainHook" data-uid="Modding.ModHooks.SoulGainHook">SoulGainHook</h4>
+  <div class="markdown level1 summary"><p>Called when Hero recovers Soul from hitting enemies</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static event Func&lt;int, int&gt; SoulGainHook</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;<span class="xref">System.Int32</span>, <span class="xref">System.Int32</span>&gt;</td>
+        <td><p>The amount of soul to recover</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Modding_ModHooks_TakeDamageHook" data-uid="Modding.ModHooks.TakeDamageHook">TakeDamageHook</h4>
+  <div class="markdown level1 summary"><p>Called when damage is dealt to the player</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static event TakeDamageProxy TakeDamageHook</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Modding.TakeDamageProxy.html">TakeDamageProxy</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Modding_ModHooks_TakeDamageHook_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>HeroController.TakeDamage</p>
+</div>
+  
+  
+  <h4 id="Modding_ModHooks_TakeHealthHook" data-uid="Modding.ModHooks.TakeHealthHook">TakeHealthHook</h4>
+  <div class="markdown level1 summary"><p>Called when health is taken from the player</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static event TakeHealthProxy TakeHealthHook</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Modding.TakeHealthProxy.html">TakeHealthProxy</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Modding_ModHooks_TakeHealthHook_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>HeroController.TakeHealth</p>
+</div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

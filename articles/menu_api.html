@@ -1,0 +1,335 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Custom Menu Creation API Guide </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Custom Menu Creation API Guide ">
+    <meta name="generator" content="docfx 2.58.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="custom-menu-creation-api-guide">Custom Menu Creation API Guide</h1>
+
+<p>The <a class="xref" href="../api/Modding.Menu.html"><code>Modding.Menu</code></a> namespace contains the systems for creating custom and
+realistic menus is a simple and streamlined way.  There are multiple ways to
+add custom menus into the game, from a simple list of options to a fully
+customized menu.</p>
+<h2 id="the-imenumod-interface">The <a class="xref" href="../api/Modding.IMenuMod.html"><code>IMenuMod</code></a> Interface</h2>
+<p>The <a class="xref" href="../api/Modding.IMenuMod.html"><code>IMenuMod</code></a> interface is used to register a custom
+menu in the mod list menu. The interface should be implemented on your mod
+class that also implements <a class="xref" href="../api/Modding.IMod.html"><code>IMod</code></a>. To use the interface
+implement the <a class="xref" href="../api/Modding.IMenuMod.html#Modding_IMenuMod_GetMenuData_"><code>GetMenuData</code></a> method that
+returns a list of <a class="xref" href="../api/Modding.IMenuMod.MenuEntry.html"><code>MenuEntry</code></a> structs. An example implementation is shown
+below.</p>
+<pre><code class="lang-cs">public class MyMod: Mod, IMenuMod
+{
+    private int optionOne;
+    private bool optionTwo;
+
+    // The rest of the class... 
+
+    public override List&lt;IMenuMod.MenuEntry&gt; GetMenuData()
+    {
+        return List&lt;IMenuMod.MenuEntry&gt;
+        {
+            new IMenuMod.MenuEntry {
+                name = &quot;My First Option&quot;,
+                description = &quot;Will be displayed in small text&quot;,
+                values = new string[] {
+                    &quot;Option 1&quot;,
+                    &quot;Option 2&quot;,
+                    &quot;Option 3&quot;
+                },
+                // opt will be the index of the option that has been chosen
+                saver = opt =&gt; this.optionOne = opt,
+                loader = () =&gt; this.optionOne
+            },
+            new IMenuMod.MenuEntry {
+                name = &quot;My Second Option&quot;,
+                // Nothing will be displayed
+                description = null,
+                values = new string[] {
+                    &quot;Off&quot;,
+                    &quot;On&quot;
+                },
+                saver = opt =&gt; opt switch {
+                    0 =&gt; this.optionTwo = false,
+                    1 =&gt; this.OptionTwo = true,
+                    // This should never be called
+                    _ =&gt; throw new InvalidOperationException()
+                },
+                loader = () =&gt; this.optionOne switch {
+                    false =&gt; 0,
+                    true =&gt; 1
+                }
+            }
+        }
+    }
+}
+</code></pre>
+<p>This creates a menu with two options on it. The
+<a class="xref" href="../api/Modding.IMenuMod.html"><code>IMenuMod</code></a> interface is very simple, but it has
+limited capabilities. For more options, the <a class="xref" href="../api/Modding.IMenuMod.html"><code>ICustomMenuMod</code></a>
+interface provides a much more in depth api.</p>
+<h2 id="icustommenumod-and-the-menubuilder-api"><a class="xref" href="../api/Modding.IMenuMod.html"><code>ICustomMenuMod</code></a> and the <a class="xref" href="../api/Modding.Menu.MenuBuilder.html"><code>MenuBuilder</code></a> API</h2>
+<p>The main body of the menu api comes from the <a class="xref" href="../api/Modding.Menu.MenuBuilder.html"><code>MenuBuilder</code></a> class. This class
+allows you to create and layout menus with a builder-style pattern.  To start,
+the <a class="xref" href="../api/Modding.Menu.MenuBuilder.html"><code>MenuBuilder</code></a> provides two constructors:</p>
+<ul>
+<li><p><a class="xref" href="../api/Modding.Menu.MenuBuilder.html#Modding_Menu_MenuBuilder__ctor_GameObject_System_String_"><code>MenuBuilder(GameObject parent, string name)</code></a>:
+Creates a new builder that places the menu on <code>parent</code> with the name of the
+string <code>name</code>.</p>
+</li>
+<li><p><a class="xref" href="../api/Modding.Menu.MenuBuilder.html#Modding_Menu_MenuBuilder__ctor_System_String_"><code>MenuBuilder(string name)</code></a>:
+Creates a new builder with named by the string
+<code>name</code> and placed on the <code>UIManager</code>'s ui canvas.</p>
+</li>
+</ul>
+<h3 id="the-hollow-knight-menu-layout">The Hollow Knight Menu Layout</h3>
+<p>The next step is to add the title and content panes for the general menu
+layout. The different base objects that can be added to a menu are listed here.</p>
+<ol>
+<li>The title: Contains an animated fleur that reacts to menu opening/closing,
+and the text of the page.</li>
+<li>The content pane: Contains most of the content of
+the menu. Should be used to organize all of the settings.</li>
+<li>The control
+buttons pane: Contains the buttons used to controls the settings. Not strictly
+necessary but can be used for organizational purposes.</li>
+</ol>
+<p><img src="../img/menu_example.png" alt="A Hollow Knight menu with 1: Title, 2: Content body, and 3: Control Buttons"></p>
+<p>To add these three objects, the <a class="xref" href="../api/Modding.Menu.MenuBuilder.html"><code>MenuBuilder</code></a>
+has <code>CreateTitle</code>,
+<a class="xref" href="../api/Modding.Menu.MenuBuilder.html#Modding_Menu_MenuBuilder_CreateContentPane_"><code>CreateContentPane</code></a>, and
+<a class="xref" href="../api/Modding.Menu.MenuBuilder.html#Modding_Menu_MenuBuilder_CreateControlPane_"><code>CreateControlPane</code></a>  which
+create the respective objects. The <a class="xref" href="../api/Modding.Menu.MenuBuilder.html#Modding_Menu_MenuBuilder_CreateTitle_"><code>CreateTitle</code></a>
+method requires a struct for the layout, and the other two just require the
+size and position of the rectangle where they will be placed.</p>
+<h3 id="using-relvector2-and-anchoredposition">Using <a class="xref" href="../api/Modding.Menu.RelVector2.html"><code>RelVector2</code></a> and <a class="xref" href="../api/Modding.Menu.AnchoredPosition.html"><code>AnchoredPosition</code></a></h3>
+<p>While Unity uses <code>RectTransform</code> to specify a rectangle's properties, the size
+and position data is combined which makes generalizing the layout harder. For
+this reason the Menu API introduces <a class="xref" href="../api/Modding.Menu.RelVector2.html"><code>RelVector2</code></a> to define the size of a
+rectangle relative to the parent, and <a class="xref" href="../api/Modding.Menu.AnchoredPosition.html"><code>AnchoredPosition</code></a> for defining the
+position of a rectangle anchored onto the parent.</p>
+<p>A <a class="xref" href="../api/Modding.Menu.RelVector2.html"><code>RelVector2</code></a> is essentially a combination of
+two vectors. One vector (<a class="xref" href="../api/Modding.Menu.RelVector2.html#Modding_Menu_RelVector2_Relative"><code>Relative</code></a>)
+is the fraction of the parent rectangle to &quot;mirror&quot;. The other vector
+(<a class="xref" href="../api/Modding.Menu.RelVector2.html#Modding_Menu_RelVector2_Delta"><code>Delta</code></a>) is a number of pixels to add to
+the size. For example, if there was a
+<a class="xref" href="../api/Modding.Menu.RelVector2.html"><code>RelVector2</code></a> with
+<a class="xref" href="../api/Modding.Menu.RelVector2.html#Modding_Menu_RelVector2_Relative"><code>Relative</code></a> being <code>(1, 0.5)</code> and
+<a class="xref" href="../api/Modding.Menu.RelVector2.html#Modding_Menu_RelVector2_Delta"><code>Delta</code></a> being <code>(0, 10)</code>, the resulting
+size would be the same length as the parent, and the height would be half the
+height of the parent + 10 pixels. To make a rectangle have an absolute size,
+<a class="xref" href="../api/Modding.Menu.RelVector2.html#Modding_Menu_RelVector2_Relative"><code>Relative</code></a> should be <code>(0, 0)</code>, then
+<a class="xref" href="../api/Modding.Menu.RelVector2.html#Modding_Menu_RelVector2_Delta"><code>Delta</code></a> will be just the size.</p>
+<p>An <a class="xref" href="../api/Modding.Menu.AnchoredPosition.html"><code>AnchoredPosition</code></a> defines how a
+rectangle should be positioned relative to its parent. It contains 3 vectors:
+<a class="xref" href="../api/Modding.Menu.AnchoredPosition.html#Modding_Menu_AnchoredPosition_ParentAnchor"><code>ParentAnchor</code></a>,
+<a class="xref" href="../api/Modding.Menu.AnchoredPosition.html#Modding_Menu_AnchoredPosition_ChildAnchor"><code>ChildAnchor</code></a>, and
+<a class="xref" href="../api/Modding.Menu.AnchoredPosition.html#Modding_Menu_AnchoredPosition_Offset"><code>Offset</code></a>.  the parent/child anchor
+fields are essentially normalized positions on the respective rectangles, where
+<code>(0, 0)</code> is the lower left corner and <code>(1, 1)</code> is the upper right corner. The
+<a class="xref" href="../api/Modding.Menu.AnchoredPosition.html#Modding_Menu_AnchoredPosition_ChildAnchor"><code>ChildAnchor</code></a> will be offset
+from the <a class="xref" href="../api/Modding.Menu.AnchoredPosition.html#Modding_Menu_AnchoredPosition_ParentAnchor"><code>ParentAnchor</code></a> by
+the vector <a class="xref" href="../api/Modding.Menu.AnchoredPosition.html#Modding_Menu_AnchoredPosition_Offset"><code>Offset</code></a>.</p>
+<h3 id="adding-content-to-the-menu-builder">Adding Content To The Menu Builder</h3>
+<p>The real bulk of the menu api is accessed through <code>AddContent</code> (used for the
+content pane) and <code>AddControls</code> (used for the control buttons pane). These two
+methods take an <a class="xref" href="../api/Modding.Menu.IContentLayout.html"><code>IContentLayout</code></a> which determines how the items will be placed,
+a callback used to edit the <a class="xref" href="../api/Modding.Menu.ContentArea.html"><code>ContentArea</code></a>, and optionally an <code>INavigationGraph</code>
+which builds the keyboard/controller navigation data.</p>
+<h3 id="using-icontentlayout">Using <a class="xref" href="../api/Modding.Menu.IContentLayout.html"><code>IContentLayout</code></a></h3>
+<p>The <a class="xref" href="../api/Modding.Menu.IContentLayout.html"><code>IContentLayout</code></a> interface provides a method
+<a class="xref" href="../api/Modding.Menu.IContentLayout.html#Modding_Menu_IContentLayout_ModifyNext_RectTransform_"><code>ModifyNext(RectTransform rt)</code></a>
+that will edit the data to place it in a specific location. The menu api
+provides a few useful content layouts that should cover most of the common
+uses.</p>
+<ul>
+<li><p><a class="xref" href="../api/Modding.Menu.NullContentLayout.html"><code>NullContentLayout</code></a> is a layout that does nothing to the layout that gets</p>
+</li>
+<li><p>passed in. This should be used instead of <code>null</code> to prevent null dereferences.</p>
+</li>
+<li><p><a class="xref" href="../api/Modding.Menu.RegularGridLayout.html"><code>RegularGridLayout</code></a> places items in a grid row by row.
+The basic constructor requires an <a class="xref" href="../api/Modding.Menu.AnchoredPosition.html"><code>AnchoredPosition</code></a>
+for where the grid should start, a <a class="xref" href="../api/Modding.Menu.RelVector2.html"><code>RelVector2</code></a> that is
+the size of each grid cell, and the number of columns the grid should be.  It also provides a method
+<a class="xref" href="../api/Modding.Menu.RegularGridLayout.html#Modding_Menu_RegularGridLayout_CreateVerticalLayout_"><code>CreateVerticalLayout</code></a>
+that places items in a single column, top to bottom.</p>
+</li>
+<li><p><a class="xref" href="../api/Modding.Menu.EnumeratorLayout.html"><code>EnumeratorLayout</code></a> applies an
+<code>IEnumerator</code> of <a class="xref" href="../api/Modding.Menu.AnchoredPosition.html"><code>AnchoredPosition</code></a>s to
+the passed in <code>RectTransform</code>s.</p>
+</li>
+<li><p><a class="xref" href="../api/Modding.Menu.SingleContentLayout.html"><code>SingleContentLayout</code></a> places the items
+in a single position. For more advanced use cases, implementing this interface
+is extremely easy using <a class="xref" href="../api/Modding.Menu.AnchoredPosition.html"><code>AnchoredPosition</code></a>.</p>
+</li>
+</ul>
+<h3 id="the-contentarea-class">The <a class="xref" href="../api/Modding.Menu.ContentArea.html"><code>ContentArea</code></a> Class</h3>
+<p>The way to add the actual menu items is through the
+<a class="xref" href="../api/Modding.Menu.ContentArea.html"><code>ContentArea</code></a> class. This class just contains
+the parent object to place the items on, a content layout,
+and a navigation graph. The actual methods to add content are extension methods
+from the classes in the <a href="https://github.com/hk-modding/api/tree/master/Assembly-CSharp/Menu/Content">Content
+Folder</a>.
+As long as the using declaration for <code>Modding.Menu</code> is present, these methods
+can
+be used with <code>.</code> call syntax. Each method generally has two variants, one with
+<code>out</code> parameters to return a useful component or object, and one without. For a
+high level overview of the methods, the following list has a light description
+of each method included, but the built in docs will provide much more detail.</p>
+<ul>
+<li><a class="xref" href="../api/Modding.Menu.MenuButtonContent.html#Modding_Menu_MenuButtonContent_AddMenuButton_"><code>AddMenuButton</code></a> adds a
+clickable menu button. This button has a custom submit action which can execute
+user defined code.</li>
+<li><a class="xref" href="../api/Modding.Menu.HorizontalOptionContent.html#Modding_Menu_HorizontalOptionContent_AddHorizontalOption_"><code>AddHorizontalOption</code></a>
+adds an option item that can be changed with the left/right navigation keys.</li>
+<li><a class="xref" href="../api/Modding.Menu.KeybindContent.html#Modding_Menu_KeybindContent_AddKeybind_"><code>AddKeybind</code></a> adds a keyboard
+keybind button. This can be used to have mappable keys in game.</li>
+<li><a class="xref" href="../api/Modding.Menu.StaticContent.html#Modding_Menu_StaticContent_AddStaticPanel_"><code>AddStaticPanel</code></a> adds an
+object with a size that  doesn't do anything else.</li>
+<li><a class="xref" href="../api/Modding.Menu.StaticContent.html#Modding_Menu_StaticContent_AddTextPanel_"><code>AddTextPanel</code></a> adds a static text label.</li>
+<li><a class="xref" href="../api/Modding.Menu.StaticContent.html#Modding_Menu_StaticContent_AddImagePanel_"><code>AddImagePanel</code></a> adds a predefined image to the menu.</li>
+<li><a class="xref" href="../api/Modding.Menu.StaticContent.html#Modding_Menu_StaticContent_AddWrappedItem_"><code>AddWrappedItem</code></a> creates a
+zero size wrapper that can have other items added inside of it. This should
+generally only be used to work with vanilla menus.</li>
+</ul>
+<p>Many of these methods will require a config struct. These are found in the
+<code>Modding.Menu.Config</code> namespace. Any &quot;<code>Style</code>&quot; structs will have some values
+that are correct for vanilla hollow knight menus.</p>
+<h3 id="navigation-graphs">Navigation Graphs</h3>
+<p>A similar interface to [<code>IContentLayout</code>](xref: Modding.Menu.IContentLayout),
+the <a class="xref" href="../api/Modding.Menu.INavigationGraph.html"><code>INavigationGraph</code></a> interface
+constructs a complete and interactive navigation system of added content. The
+navigation graph used can be set in two ways. The first and most common way is
+with the <a class="xref" href="../api/Modding.Menu.MenuBuilder.html#Modding_Menu_MenuBuilder_SetDefaultNavGraph_"><code>SetDefaultNavGraph</code></a>
+method in <a class="xref" href="../api/Modding.Menu.MenuBuilder.html"><code>MenuBuilder</code></a>. The other way is to
+pass a navgraph into the <code>AddContent</code>/<code>AddControls</code> method, overriding the
+default navgraph that has been set. Just like the content layouts, the menu api
+comes with some useful navigation graphs.</p>
+<ul>
+<li><a class="xref" href="../api/Modding.Menu.NullNavigationGraph.html"><code>NullNavigationGraph</code></a> does not
+create a the navigation graph. This should always be used instead of <code>null</code>.</li>
+<li><a class="xref" href="../api/Modding.Menu.ChainedNavGraph.html"><code>ChainedNavGraph</code></a> is a simply circular
+chain style graph that loops the added menu items in a certain direction.</li>
+<li><a class="xref" href="../api/Modding.Menu.GridNavGraph.html"><code>GridNavGraph</code></a> creates the graph in a grid
+that loops around, starting from the top-left and going row by row.</li>
+</ul>
+<h3 id="building-the-screen">Building the Screen</h3>
+<p>To finalize the changes to a <a class="xref" href="../api/Modding.Menu.MenuBuilder.html"><code>MenuBuilder</code></a>, the <code>Build</code> method should be
+called. This builds the navigation graph and adds the component to
+automatically select the first item. This method returns a <a href="xref:MenuScreen"><code>MenuScreen</code></a> which
+can then be used with patched methods in <code>UIManager</code></p>
+<h3 id="adding-custom-menus-with-icustommenumod">Adding Custom Menus With <a class="xref" href="../api/Modding.IMenuMod.html"><code>ICustomMenuMod</code></a></h3>
+<p>Like <a class="xref" href="../api/Modding.IMenuMod.html"><code>IMenuMod</code></a>, the interfaace
+<a class="xref" href="../api/Modding.IMenuMod.html"><code>ICustomMenuMod</code></a> requires implementation of a single
+method <a class="xref" href="../api/Modding.ICustomMenuMod.html#Modding_ICustomMenuMod_GetMenuScreen_"><code>GetMenuScreen</code></a> which returns the built menu screen. This method
+recieves the <a href="xref:MenuScreen"><code>MenuScreen</code></a> of the mod menu, which should be used to exit back to
+that menu.</p>
+<h3 id="building-menus-outside-of-the-mod-list-menu">Building Menus Outside of the Mod List Menu</h3>
+<p>Because of the way the UIManager's lifecycle works, the menu will have to be
+created each time a new UIManager is created. The modding API adds an event
+called <code>EditMenus</code> that should be used to create a menu. No code using the menu
+api should be run outside of the callbacks added to this event, as on a save
+and quit, the UIManager will be reset. This event will call the passed in
+callback when its being added if the UIManager has already started.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/hk-modding/api/blob/docs/articles/menu_api.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

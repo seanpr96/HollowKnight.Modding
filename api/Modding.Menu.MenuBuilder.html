@@ -1,0 +1,749 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class MenuBuilder
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class MenuBuilder
+   ">
+    <meta name="generator" content="docfx 2.58.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Modding.Menu.MenuBuilder">
+  
+  
+  <h1 id="Modding_Menu_MenuBuilder" data-uid="Modding.Menu.MenuBuilder" class="text-break">Class MenuBuilder
+  </h1>
+  <div class="markdown level0 summary"><p>A builder style class for creating in-game menus.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">MenuBuilder</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Modding.Menu.html">Modding.Menu</a></h6>
+  <h6><strong>Assembly</strong>: Assembly-CSharp.mm.dll</h6>
+  <h5 id="Modding_Menu_MenuBuilder_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class MenuBuilder</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="Modding_Menu_MenuBuilder__ctor_" data-uid="Modding.Menu.MenuBuilder.#ctor*"></a>
+  <h4 id="Modding_Menu_MenuBuilder__ctor_GameObject_System_String_" data-uid="Modding.Menu.MenuBuilder.#ctor(GameObject,System.String)">MenuBuilder(GameObject, String)</h4>
+  <div class="markdown level1 summary"><p>Creates a new <code>MenuBuilder</code> on a canvas.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MenuBuilder(GameObject canvas, string name)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">GameObject</span></td>
+        <td><span class="parametername">canvas</span></td>
+        <td><p>The canvas to make the root menu on.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The name of the root menu.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Modding_Menu_MenuBuilder__ctor_" data-uid="Modding.Menu.MenuBuilder.#ctor*"></a>
+  <h4 id="Modding_Menu_MenuBuilder__ctor_System_String_" data-uid="Modding.Menu.MenuBuilder.#ctor(System.String)">MenuBuilder(String)</h4>
+  <div class="markdown level1 summary"><p>Creates a new <code>MenuBuilder</code> on the UIManager instance canvas.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MenuBuilder(string name)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The name of the root menu.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Modding_Menu_MenuBuilder_DefaultNavGraph_" data-uid="Modding.Menu.MenuBuilder.DefaultNavGraph*"></a>
+  <h4 id="Modding_Menu_MenuBuilder_DefaultNavGraph" data-uid="Modding.Menu.MenuBuilder.DefaultNavGraph">DefaultNavGraph</h4>
+  <div class="markdown level1 summary"><p>The current default navigation graph that gets used for <code>AddContent</code> and <code>AddControls</code> calls.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public INavigationGraph DefaultNavGraph { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Modding.Menu.INavigationGraph.html">INavigationGraph</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Modding_Menu_MenuBuilder_MenuObject_" data-uid="Modding.Menu.MenuBuilder.MenuObject*"></a>
+  <h4 id="Modding_Menu_MenuBuilder_MenuObject" data-uid="Modding.Menu.MenuBuilder.MenuObject">MenuObject</h4>
+  <div class="markdown level1 summary"><p>The root game object of the menu.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GameObject MenuObject { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">GameObject</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Modding_Menu_MenuBuilder_Screen_" data-uid="Modding.Menu.MenuBuilder.Screen*"></a>
+  <h4 id="Modding_Menu_MenuBuilder_Screen" data-uid="Modding.Menu.MenuBuilder.Screen">Screen</h4>
+  <div class="markdown level1 summary"><p>The <code>MenuScreen</code> component on <code>menuObject</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MenuScreen Screen { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">MenuScreen</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Modding_Menu_MenuBuilder_AddContent_" data-uid="Modding.Menu.MenuBuilder.AddContent*"></a>
+  <h4 id="Modding_Menu_MenuBuilder_AddContent_Modding_Menu_IContentLayout_Modding_Menu_INavigationGraph_System_Action_Modding_Menu_ContentArea__" data-uid="Modding.Menu.MenuBuilder.AddContent(Modding.Menu.IContentLayout,Modding.Menu.INavigationGraph,System.Action{Modding.Menu.ContentArea})">AddContent(IContentLayout, INavigationGraph, Action&lt;ContentArea&gt;)</h4>
+  <div class="markdown level1 summary"><p>Adds &quot;content&quot; to the menu in a certain layout. <br>
+If <code>CreateContentPane</code> has not been called yet, this method will immeddiately return.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MenuBuilder AddContent(IContentLayout layout, INavigationGraph navgraph, Action&lt;ContentArea&gt; action)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Modding.Menu.IContentLayout.html">IContentLayout</a></td>
+        <td><span class="parametername">layout</span></td>
+        <td><p>The layout of the added content</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Modding.Menu.INavigationGraph.html">INavigationGraph</a></td>
+        <td><span class="parametername">navgraph</span></td>
+        <td><p>The navigation graph to place the selectables in.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="Modding.Menu.ContentArea.html">ContentArea</a>&gt;</td>
+        <td><span class="parametername">action</span></td>
+        <td><p>The action that will get called to add the content</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Modding.Menu.MenuBuilder.html">MenuBuilder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Modding_Menu_MenuBuilder_AddContent_" data-uid="Modding.Menu.MenuBuilder.AddContent*"></a>
+  <h4 id="Modding_Menu_MenuBuilder_AddContent_Modding_Menu_IContentLayout_System_Action_Modding_Menu_ContentArea__" data-uid="Modding.Menu.MenuBuilder.AddContent(Modding.Menu.IContentLayout,System.Action{Modding.Menu.ContentArea})">AddContent(IContentLayout, Action&lt;ContentArea&gt;)</h4>
+  <div class="markdown level1 summary"><p>Adds &quot;content&quot; to the menu in a certain layout with the default navigation graph.<br>
+If <code>CreateContentPane</code> has not been called yet, this method will immeddiately return.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MenuBuilder AddContent(IContentLayout layout, Action&lt;ContentArea&gt; action)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Modding.Menu.IContentLayout.html">IContentLayout</a></td>
+        <td><span class="parametername">layout</span></td>
+        <td><p>The layout of the added content</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="Modding.Menu.ContentArea.html">ContentArea</a>&gt;</td>
+        <td><span class="parametername">action</span></td>
+        <td><p>The action that will get called to add the content</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Modding.Menu.MenuBuilder.html">MenuBuilder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Modding_Menu_MenuBuilder_AddControls_" data-uid="Modding.Menu.MenuBuilder.AddControls*"></a>
+  <h4 id="Modding_Menu_MenuBuilder_AddControls_Modding_Menu_IContentLayout_Modding_Menu_INavigationGraph_System_Action_Modding_Menu_ContentArea__" data-uid="Modding.Menu.MenuBuilder.AddControls(Modding.Menu.IContentLayout,Modding.Menu.INavigationGraph,System.Action{Modding.Menu.ContentArea})">AddControls(IContentLayout, INavigationGraph, Action&lt;ContentArea&gt;)</h4>
+  <div class="markdown level1 summary"><p>Adds &quot;content&quot; to the control pane in a certain layout.<br>
+If <code>CreateControlPane</code> has not been called yet, this method will immeddiately return.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MenuBuilder AddControls(IContentLayout layout, INavigationGraph navgraph, Action&lt;ContentArea&gt; action)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Modding.Menu.IContentLayout.html">IContentLayout</a></td>
+        <td><span class="parametername">layout</span></td>
+        <td><p>The layout to apply to the added content.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Modding.Menu.INavigationGraph.html">INavigationGraph</a></td>
+        <td><span class="parametername">navgraph</span></td>
+        <td><p>The navigation graph to place the selectables in.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="Modding.Menu.ContentArea.html">ContentArea</a>&gt;</td>
+        <td><span class="parametername">action</span></td>
+        <td><p>The action that will get called to add the content.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Modding.Menu.MenuBuilder.html">MenuBuilder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Modding_Menu_MenuBuilder_AddControls_" data-uid="Modding.Menu.MenuBuilder.AddControls*"></a>
+  <h4 id="Modding_Menu_MenuBuilder_AddControls_Modding_Menu_IContentLayout_System_Action_Modding_Menu_ContentArea__" data-uid="Modding.Menu.MenuBuilder.AddControls(Modding.Menu.IContentLayout,System.Action{Modding.Menu.ContentArea})">AddControls(IContentLayout, Action&lt;ContentArea&gt;)</h4>
+  <div class="markdown level1 summary"><p>Adds &quot;content&quot; to the control pane in a certain layout with the default navigation graph.<br>
+If <code>CreateControlPane</code> has not been called yet, this method will immeddiately return.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MenuBuilder AddControls(IContentLayout layout, Action&lt;ContentArea&gt; action)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Modding.Menu.IContentLayout.html">IContentLayout</a></td>
+        <td><span class="parametername">layout</span></td>
+        <td><p>The layout to apply to the added content.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="Modding.Menu.ContentArea.html">ContentArea</a>&gt;</td>
+        <td><span class="parametername">action</span></td>
+        <td><p>The action that will get called to add the content.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Modding.Menu.MenuBuilder.html">MenuBuilder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Modding_Menu_MenuBuilder_Build_" data-uid="Modding.Menu.MenuBuilder.Build*"></a>
+  <h4 id="Modding_Menu_MenuBuilder_Build" data-uid="Modding.Menu.MenuBuilder.Build">Build()</h4>
+  <div class="markdown level1 summary"><p>Builds the menu, calling any <code>OnBuild</code> events and returning the screen.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MenuScreen Build()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">MenuScreen</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Modding_Menu_MenuBuilder_CreateContentPane_" data-uid="Modding.Menu.MenuBuilder.CreateContentPane*"></a>
+  <h4 id="Modding_Menu_MenuBuilder_CreateContentPane_Modding_Menu_RectTransformData_" data-uid="Modding.Menu.MenuBuilder.CreateContentPane(Modding.Menu.RectTransformData)">CreateContentPane(RectTransformData)</h4>
+  <div class="markdown level1 summary"><p>Creates the content canvas group to hold the majority of items in the menu.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MenuBuilder CreateContentPane(RectTransformData style)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Modding.Menu.RectTransformData.html">RectTransformData</a></td>
+        <td><span class="parametername">style</span></td>
+        <td><p>The rect describing the size and position of the content pane.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Modding.Menu.MenuBuilder.html">MenuBuilder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Modding_Menu_MenuBuilder_CreateControlPane_" data-uid="Modding.Menu.MenuBuilder.CreateControlPane*"></a>
+  <h4 id="Modding_Menu_MenuBuilder_CreateControlPane_Modding_Menu_RectTransformData_" data-uid="Modding.Menu.MenuBuilder.CreateControlPane(Modding.Menu.RectTransformData)">CreateControlPane(RectTransformData)</h4>
+  <div class="markdown level1 summary"><p>Creates the control canvas group to hold the buttons at the bottom of the menu.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MenuBuilder CreateControlPane(RectTransformData style)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Modding.Menu.RectTransformData.html">RectTransformData</a></td>
+        <td><span class="parametername">style</span></td>
+        <td><p>The rect describing the size and position of the control pane.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Modding.Menu.MenuBuilder.html">MenuBuilder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Modding_Menu_MenuBuilder_CreateTitle_" data-uid="Modding.Menu.MenuBuilder.CreateTitle*"></a>
+  <h4 id="Modding_Menu_MenuBuilder_CreateTitle_System_String_Modding_Menu_Config_MenuTitleStyle_" data-uid="Modding.Menu.MenuBuilder.CreateTitle(System.String,Modding.Menu.Config.MenuTitleStyle)">CreateTitle(String, MenuTitleStyle)</h4>
+  <div class="markdown level1 summary"><p>Adds a title and top fleur to the menu.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MenuBuilder CreateTitle(string title, MenuTitleStyle style)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">title</span></td>
+        <td><p>The title to render on the menu.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Modding.Menu.Config.MenuTitleStyle.html">MenuTitleStyle</a></td>
+        <td><span class="parametername">style</span></td>
+        <td><p>The styling of the title.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Modding.Menu.MenuBuilder.html">MenuBuilder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Modding_Menu_MenuBuilder_SetDefaultNavGraph_" data-uid="Modding.Menu.MenuBuilder.SetDefaultNavGraph*"></a>
+  <h4 id="Modding_Menu_MenuBuilder_SetDefaultNavGraph_Modding_Menu_INavigationGraph_" data-uid="Modding.Menu.MenuBuilder.SetDefaultNavGraph(Modding.Menu.INavigationGraph)">SetDefaultNavGraph(INavigationGraph)</h4>
+  <div class="markdown level1 summary"><p>Sets the default navigation graph to use for <code>AddContent</code> and <code>AddControls</code> calls.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MenuBuilder SetDefaultNavGraph(INavigationGraph navGraph)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Modding.Menu.INavigationGraph.html">INavigationGraph</a></td>
+        <td><span class="parametername">navGraph</span></td>
+        <td><p>The default navigation graph to set.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Modding.Menu.MenuBuilder.html">MenuBuilder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="events">Events
+  </h3>
+  
+  
+  <h4 id="Modding_Menu_MenuBuilder_OnBuild" data-uid="Modding.Menu.MenuBuilder.OnBuild">OnBuild</h4>
+  <div class="markdown level1 summary"><p>An event that gets called at the start of <code>Build</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action&lt;MenuBuilder&gt; OnBuild</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="Modding.Menu.MenuBuilder.html">MenuBuilder</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

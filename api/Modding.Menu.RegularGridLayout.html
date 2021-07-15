@@ -1,0 +1,466 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class RegularGridLayout
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class RegularGridLayout
+   ">
+    <meta name="generator" content="docfx 2.58.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Modding.Menu.RegularGridLayout">
+  
+  
+  <h1 id="Modding_Menu_RegularGridLayout" data-uid="Modding.Menu.RegularGridLayout" class="text-break">Class RegularGridLayout
+  </h1>
+  <div class="markdown level0 summary"><p>A layout to place items in a grid pattern.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">RegularGridLayout</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Modding.Menu.IContentLayout.html">IContentLayout</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Modding.Menu.html">Modding.Menu</a></h6>
+  <h6><strong>Assembly</strong>: Assembly-CSharp.mm.dll</h6>
+  <h5 id="Modding_Menu_RegularGridLayout_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class RegularGridLayout : IContentLayout</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="Modding_Menu_RegularGridLayout__ctor_" data-uid="Modding.Menu.RegularGridLayout.#ctor*"></a>
+  <h4 id="Modding_Menu_RegularGridLayout__ctor_Modding_Menu_AnchoredPosition_Modding_Menu_RelVector2_System_Int32_" data-uid="Modding.Menu.RegularGridLayout.#ctor(Modding.Menu.AnchoredPosition,Modding.Menu.RelVector2,System.Int32)">RegularGridLayout(AnchoredPosition, RelVector2, Int32)</h4>
+  <div class="markdown level1 summary"><p>Creates a new regular grid layout.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RegularGridLayout(AnchoredPosition start, RelVector2 itemAdvance, int columns)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Modding.Menu.AnchoredPosition.html">AnchoredPosition</a></td>
+        <td><span class="parametername">start</span></td>
+        <td><p>The starting position of the first item in the grid.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Modding.Menu.RelVector2.html">RelVector2</a></td>
+        <td><span class="parametername">itemAdvance</span></td>
+        <td><p>The &quot;size&quot; of a cell in the grid.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">columns</span></td>
+        <td><p>The maximum number of columns to allow.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Modding_Menu_RegularGridLayout_Columns_" data-uid="Modding.Menu.RegularGridLayout.Columns*"></a>
+  <h4 id="Modding_Menu_RegularGridLayout_Columns" data-uid="Modding.Menu.RegularGridLayout.Columns">Columns</h4>
+  <div class="markdown level1 summary"><p>The maximum number of columns to allow.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Columns { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Modding_Menu_RegularGridLayout_Index_" data-uid="Modding.Menu.RegularGridLayout.Index*"></a>
+  <h4 id="Modding_Menu_RegularGridLayout_Index" data-uid="Modding.Menu.RegularGridLayout.Index">Index</h4>
+  <div class="markdown level1 summary"><p>The &quot;index&quot; of the next item to be placed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Index { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Modding_Menu_RegularGridLayout_IndexPos_" data-uid="Modding.Menu.RegularGridLayout.IndexPos*"></a>
+  <h4 id="Modding_Menu_RegularGridLayout_IndexPos" data-uid="Modding.Menu.RegularGridLayout.IndexPos">IndexPos</h4>
+  <div class="markdown level1 summary"><p>The position in grid cells of the next item.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector2Int IndexPos { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector2Int</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Modding_Menu_RegularGridLayout_ItemAdvance_" data-uid="Modding.Menu.RegularGridLayout.ItemAdvance*"></a>
+  <h4 id="Modding_Menu_RegularGridLayout_ItemAdvance" data-uid="Modding.Menu.RegularGridLayout.ItemAdvance">ItemAdvance</h4>
+  <div class="markdown level1 summary"><p>The &quot;size&quot; of a cell in the grid.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RelVector2 ItemAdvance { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Modding.Menu.RelVector2.html">RelVector2</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Modding_Menu_RegularGridLayout_Start_" data-uid="Modding.Menu.RegularGridLayout.Start*"></a>
+  <h4 id="Modding_Menu_RegularGridLayout_Start" data-uid="Modding.Menu.RegularGridLayout.Start">Start</h4>
+  <div class="markdown level1 summary"><p>The starting position of the first cell.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AnchoredPosition Start { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Modding.Menu.AnchoredPosition.html">AnchoredPosition</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Modding_Menu_RegularGridLayout_ChangeColumns_" data-uid="Modding.Menu.RegularGridLayout.ChangeColumns*"></a>
+  <h4 id="Modding_Menu_RegularGridLayout_ChangeColumns_System_Int32_System_Single_System_Nullable_Modding_Menu_RelVector2__System_Single_" data-uid="Modding.Menu.RegularGridLayout.ChangeColumns(System.Int32,System.Single,System.Nullable{Modding.Menu.RelVector2},System.Single)">ChangeColumns(Int32, Single, Nullable&lt;RelVector2&gt;, Single)</h4>
+  <div class="markdown level1 summary"><p>Changes the column width of the layout, continuing where the layout left off.<br>
+This method should generally only be called at the end of a row,
+because otherwise it may cause an overlap of the currently placed menu items
+and the new menu items in the same row.<br>
+Internally this method resets the actual index count so a copy of index should be saved before calling
+this method if needed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ChangeColumns(int columns, float originalAnchor = 0.5F, RelVector2? newSize = default(RelVector2? ), float newAnchor = 0.5F)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">columns</span></td>
+        <td><p>The new number of columns.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">originalAnchor</span></td>
+        <td><p>The normalized anchor on the original &quot;width&quot; to place the new grid.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Modding.Menu.RelVector2.html">RelVector2</a>&gt;</td>
+        <td><span class="parametername">newSize</span></td>
+        <td><p>The new size of the grid element, or null to not change.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">newAnchor</span></td>
+        <td><p>The normalized anchor on the new &quot;width&quot; to place the anchor.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Modding_Menu_RegularGridLayout_CreateVerticalLayout_" data-uid="Modding.Menu.RegularGridLayout.CreateVerticalLayout*"></a>
+  <h4 id="Modding_Menu_RegularGridLayout_CreateVerticalLayout_System_Single_Vector2_" data-uid="Modding.Menu.RegularGridLayout.CreateVerticalLayout(System.Single,Vector2)">CreateVerticalLayout(Single, Vector2)</h4>
+  <div class="markdown level1 summary"><p>Creates a single column, top down vertical layout.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static RegularGridLayout CreateVerticalLayout(float itemHeight, Vector2 start = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">itemHeight</span></td>
+        <td><p>The height of each item.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Vector2</span></td>
+        <td><span class="parametername">start</span></td>
+        <td><p>The starting position.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Modding.Menu.RegularGridLayout.html">RegularGridLayout</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Modding_Menu_RegularGridLayout_ModifyNext_" data-uid="Modding.Menu.RegularGridLayout.ModifyNext*"></a>
+  <h4 id="Modding_Menu_RegularGridLayout_ModifyNext_RectTransform_" data-uid="Modding.Menu.RegularGridLayout.ModifyNext(RectTransform)">ModifyNext(RectTransform)</h4>
+  <div class="markdown level1 summary"><p>Modifies a <code>RectTransform</code> to place it in the next spot in the grid.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ModifyNext(RectTransform rt)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">RectTransform</span></td>
+        <td><span class="parametername">rt</span></td>
+        <td><p>The <code>RectTransform</code> to modify.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Modding.Menu.IContentLayout.html">IContentLayout</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

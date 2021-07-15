@@ -1,0 +1,553 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Struct AnchoredPosition
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Struct AnchoredPosition
+   ">
+    <meta name="generator" content="docfx 2.58.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Modding.Menu.AnchoredPosition">
+  
+  
+  <h1 id="Modding_Menu_AnchoredPosition" data-uid="Modding.Menu.AnchoredPosition" class="text-break">Struct AnchoredPosition
+  </h1>
+  <div class="markdown level0 summary"><p>A struct to define anchored positioning relative to a parent.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.ValueType.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.ValueType.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.ValueType.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Modding.Menu.html">Modding.Menu</a></h6>
+  <h6><strong>Assembly</strong>: Assembly-CSharp.mm.dll</h6>
+  <h5 id="Modding_Menu_AnchoredPosition_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public struct AnchoredPosition</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="Modding_Menu_AnchoredPosition__ctor_" data-uid="Modding.Menu.AnchoredPosition.#ctor*"></a>
+  <h4 id="Modding_Menu_AnchoredPosition__ctor_Vector2_Vector2_Vector2_" data-uid="Modding.Menu.AnchoredPosition.#ctor(Vector2,Vector2,Vector2)">AnchoredPosition(Vector2, Vector2, Vector2)</h4>
+  <div class="markdown level1 summary"><p>Creates a new <code>RectPosition</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AnchoredPosition(Vector2 parentAnchor, Vector2 childAnchor, Vector2 offset = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector2</span></td>
+        <td><span class="parametername">parentAnchor</span></td>
+        <td><p>The normalized point on the parent to anchor the child on.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Vector2</span></td>
+        <td><span class="parametername">childAnchor</span></td>
+        <td><p>The normalized point on the child to anchor to the parent.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Vector2</span></td>
+        <td><span class="parametername">offset</span></td>
+        <td><p>The offset from the parent anchor to the child anchor.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="Modding_Menu_AnchoredPosition_ChildAnchor" data-uid="Modding.Menu.AnchoredPosition.ChildAnchor">ChildAnchor</h4>
+  <div class="markdown level1 summary"><p>The normalized anchoring point on this rectangle that will get anchored to the parent.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector2 ChildAnchor</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector2</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Modding_Menu_AnchoredPosition_ChildAnchor_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The lower left corner is (0, 0) and the upper right corner is (1, 1).</p>
+</div>
+  
+  
+  <h4 id="Modding_Menu_AnchoredPosition_Offset" data-uid="Modding.Menu.AnchoredPosition.Offset">Offset</h4>
+  <div class="markdown level1 summary"><p>The offset in pixels of the <code>childAnchor</code> from the <code>parentAnchor</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector2 Offset</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector2</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Modding_Menu_AnchoredPosition_ParentAnchor" data-uid="Modding.Menu.AnchoredPosition.ParentAnchor">ParentAnchor</h4>
+  <div class="markdown level1 summary"><p>The normalized anchoring point on the parent rectangle that will get anchored to the child.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector2 ParentAnchor</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector2</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Modding_Menu_AnchoredPosition_ParentAnchor_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The lower left corner is (0, 0) and the upper right corner is (1, 1).</p>
+</div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Modding_Menu_AnchoredPosition_FromSiblingAnchor_" data-uid="Modding.Menu.AnchoredPosition.FromSiblingAnchor*"></a>
+  <h4 id="Modding_Menu_AnchoredPosition_FromSiblingAnchor_Vector2_Modding_Menu_RectTransformData_Vector2_Vector2_" data-uid="Modding.Menu.AnchoredPosition.FromSiblingAnchor(Vector2,Modding.Menu.RectTransformData,Vector2,Vector2)">FromSiblingAnchor(Vector2, RectTransformData, Vector2, Vector2)</h4>
+  <div class="markdown level1 summary"><p>Creates a <code>RectPosition</code> from an anchor on a sibling rectangle.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static AnchoredPosition FromSiblingAnchor(Vector2 selfAnchor, RectTransformData sibling, Vector2 siblingAnchor, Vector2 offset)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector2</span></td>
+        <td><span class="parametername">selfAnchor</span></td>
+        <td><p>The normalized point on a rect to anchor to the sibling.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Modding.Menu.RectTransformData.html">RectTransformData</a></td>
+        <td><span class="parametername">sibling</span></td>
+        <td><p>The sibling rectangle to anchor to.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Vector2</span></td>
+        <td><span class="parametername">siblingAnchor</span></td>
+        <td><p>The normalized point on the sibling to anchor to.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Vector2</span></td>
+        <td><span class="parametername">offset</span></td>
+        <td><p>The offset in pixels of the <code>selfAnchor</code> to the sibling anchor point.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Modding.Menu.AnchoredPosition.html">AnchoredPosition</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Modding_Menu_AnchoredPosition_GetRepositioned_" data-uid="Modding.Menu.AnchoredPosition.GetRepositioned*"></a>
+  <h4 id="Modding_Menu_AnchoredPosition_GetRepositioned_Modding_Menu_RectTransformData_" data-uid="Modding.Menu.AnchoredPosition.GetRepositioned(Modding.Menu.RectTransformData)">GetRepositioned(RectTransformData)</h4>
+  <div class="markdown level1 summary"><p>Get a translated <code>RectTransformData</code> based on the fields in this struct.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RectTransformData GetRepositioned(RectTransformData rt)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Modding.Menu.RectTransformData.html">RectTransformData</a></td>
+        <td><span class="parametername">rt</span></td>
+        <td><p>The <code>RectTransformData</code> to translate.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Modding.Menu.RectTransformData.html">RectTransformData</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Modding_Menu_AnchoredPosition_ParentPointFromChild_" data-uid="Modding.Menu.AnchoredPosition.ParentPointFromChild*"></a>
+  <h4 id="Modding_Menu_AnchoredPosition_ParentPointFromChild_Modding_Menu_RectTransformData_Vector2_" data-uid="Modding.Menu.AnchoredPosition.ParentPointFromChild(Modding.Menu.RectTransformData,Vector2)">ParentPointFromChild(RectTransformData, Vector2)</h4>
+  <div class="markdown level1 summary"><p>Gets a normalized point on the parent from a normalized point on the child.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector2 ParentPointFromChild(RectTransformData child, Vector2 childPoint)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Modding.Menu.RectTransformData.html">RectTransformData</a></td>
+        <td><span class="parametername">child</span></td>
+        <td><p>The child rectangle.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Vector2</span></td>
+        <td><span class="parametername">childPoint</span></td>
+        <td><p>A normalized point on the child.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector2</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Modding_Menu_AnchoredPosition_Reposition_" data-uid="Modding.Menu.AnchoredPosition.Reposition*"></a>
+  <h4 id="Modding_Menu_AnchoredPosition_Reposition_RectTransform_" data-uid="Modding.Menu.AnchoredPosition.Reposition(RectTransform)">Reposition(RectTransform)</h4>
+  <div class="markdown level1 summary"><p>Translate a <code>RectTransform</code> based on the fields in this struct.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Reposition(RectTransform rt)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">RectTransform</span></td>
+        <td><span class="parametername">rt</span></td>
+        <td><p>The <code>RectTransform</code> to modify.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="operators">Operators
+  </h3>
+  
+  
+  <a id="Modding_Menu_AnchoredPosition_op_Addition_" data-uid="Modding.Menu.AnchoredPosition.op_Addition*"></a>
+  <h4 id="Modding_Menu_AnchoredPosition_op_Addition_Modding_Menu_AnchoredPosition_Modding_Menu_RelVector2_" data-uid="Modding.Menu.AnchoredPosition.op_Addition(Modding.Menu.AnchoredPosition,Modding.Menu.RelVector2)">Addition(AnchoredPosition, RelVector2)</h4>
+  <div class="markdown level1 summary"><p>Translates an anchored position by a relative vector.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static AnchoredPosition operator +(AnchoredPosition lhs, RelVector2 rhs)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Modding.Menu.AnchoredPosition.html">AnchoredPosition</a></td>
+        <td><span class="parametername">lhs</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Modding.Menu.RelVector2.html">RelVector2</a></td>
+        <td><span class="parametername">rhs</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Modding.Menu.AnchoredPosition.html">AnchoredPosition</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Modding_Menu_AnchoredPosition_op_Addition_" data-uid="Modding.Menu.AnchoredPosition.op_Addition*"></a>
+  <h4 id="Modding_Menu_AnchoredPosition_op_Addition_Modding_Menu_RelVector2_Modding_Menu_AnchoredPosition_" data-uid="Modding.Menu.AnchoredPosition.op_Addition(Modding.Menu.RelVector2,Modding.Menu.AnchoredPosition)">Addition(RelVector2, AnchoredPosition)</h4>
+  <div class="markdown level1 summary"><p>Translates an anchored position by a relative vector.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static AnchoredPosition operator +(RelVector2 lhs, AnchoredPosition rhs)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Modding.Menu.RelVector2.html">RelVector2</a></td>
+        <td><span class="parametername">lhs</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Modding.Menu.AnchoredPosition.html">AnchoredPosition</a></td>
+        <td><span class="parametername">rhs</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Modding.Menu.AnchoredPosition.html">AnchoredPosition</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

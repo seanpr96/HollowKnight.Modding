@@ -1,0 +1,495 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Charms </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Charms ">
+    <meta name="generator" content="docfx 2.58.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="charms">Charms</h1>
+
+<p>Ownership of charms can be checked with the <code>PlayerData.instance.gotCharm_X</code>
+var, where X is the ID found in the following list. Checking if they are
+equipped can be checked with <code>PlayerData.instance.equippedCharm_X</code>. The cost to
+equip charms can be changed with <code>PlayerData.instance.charmCost_X</code>.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Using <code>PlayerData.instance.GetBool(&quot;gotCharm_X&quot;)</code> or
+<code>PlayerData.instance.GetInt(&quot;charmCost_X&quot;)</code> is prefered, as that way
+other mods can make their changes to the desired values.</p>
+</div>
+<h1 id="overriding-values">Overriding values</h1>
+<p>You can directly set <code>PlayerData</code> values, however, this permanently changes a
+save file. It's often better to use the
+<a class="xref" href="../api/Modding.ModHooks.html#Modding_ModHooks_GetPlayerIntHook"><code>GetPlayerIntHook</code></a>.  This makes the
+change only apply when the mod is active, which is generally preferable.</p>
+<pre><code class="lang-cs">using Modding;
+
+// This changes the cost of Wayward Compass to 0
+public class Example : Mod {
+    public override void Initialize() {
+        ModHooks.GetPlayerIntHook += GetInt;
+    }
+
+    private int GetInt(string name, int orig) {
+        return name == nameof(PlayerData.charmCost_2)
+            ? 0
+            : orig;
+    }
+}
+</code></pre>
+<p>For the actual behaviour of charms, it varies from charm-to-charm. However,
+a large amount can be found on HeroController constants such as <code>RUN_SPEED_CH</code>
+and <code>RUN_SPEED_CH_COMBO</code> for Sprintmaster, <code>GRUB_SOUL_MP</code> and <code>GRUB_SOUL_MP</code>
+for Grubsong, <code>ATTACK_DURATION_CH</code> for Quickslash, and more.</p>
+<h1 id="sprites">Sprites</h1>
+<p>If you mean to replace a charm, then you can change the sprites used for it.
+There are two main areas a charm sprite pops up, one being the inventory and
+the other being shops. You can change them as follows:</p>
+<div class="tabGroup" id="tabgroup_bHGHmlrG6S">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S_tabid-1" role="tab" aria-controls="tabpanel_bHGHmlrG6S_tabid-1" data-tab="tabid-1" tabindex="0" aria-selected="true">Inventory</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_bHGHmlrG6S_tabid-2" role="tab" aria-controls="tabpanel_bHGHmlrG6S_tabid-2" data-tab="tabid-2" tabindex="-1">Shops</a>
+</li>
+</ul>
+<section id="tabpanel_bHGHmlrG6S_tabid-1" role="tabpanel" data-tab="tabid-1">
+
+<p>Given a sprite, one can replace it in the inventory using <code>CharmIconList</code>,
+which allows you to just assign to its sprite list, indexed by charm ID.</p>
+<pre><code class="lang-cs">CharmIconList.Instance.spriteList[i] = sprite;
+</code></pre>
+<p>A few charms, such as grimmchild and the unbreakable charms have separate
+fields in the CharmIconList class.</p>
+</section>
+<section id="tabpanel_bHGHmlrG6S_tabid-2" role="tabpanel" data-tab="tabid-2" aria-hidden="true" hidden="hidden">
+
+<p>Shops are a little more complicated, but can be most easily done using
+the <code>On</code> hook for <code>ShopItems.Awake</code>. For brevity, only the handler will
+be shown below.</p>
+<pre><code>// An example of storing multiple sprites which your mod would fill.
+private Dictionary&lt;int, Sprite&gt; _sprites = new();
+
+private void Awake(On.ShopItemStats.orig_Awake orig, ShopItemStats self) {
+    orig(self);
+
+    string pd_bool = self.playerDataBoolname;
+
+    if (!pd_bool.StartsWith(&quot;gotCharm_&quot;))
+        return;
+
+    if (!_sprites.TryGetValue(key, out var sprite))
+        return;
+
+    var go = ReflectionHelper.GetField&lt;ShopItemStats, GameObject&gt;(self, &quot;itemSprite&quot;);
+    
+    go.GetComponent&lt;SpriteRenderer&gt;().sprite = sprite;
+}
+</code></pre>
+</section>
+</div>
+<h1 id="values">Values</h1>
+<table class="docutils" border="1">
+    <colgroup>
+        <col width="5%">
+        <col width="36%">
+        <col width="23%">
+        <col width="37%">
+    </colgroup>
+    <thead valign="bottom">
+        <tr class="row-odd">
+            <th class="head">ID</th>
+            <th class="head">Name</th>
+            <th class="head">LangName</th>
+            <th class="head">Add.Bool</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+        <tr class="row-even">
+            <td>01</td>
+            <td>Gathering Swarm</td>
+            <td>CHARM_NAME_1</td>
+            <td>None</td>
+        </tr>
+        <tr class="row-odd">
+            <td>02</td>
+            <td>Wayward Compass</td>
+            <td>CHARM_NAME_2</td>
+            <td>None</td>
+        </tr>
+        <tr class="row-even">
+            <td>03</td>
+            <td>Grubsong</td>
+            <td>CHARM_NAME_3</td>
+            <td>None</td>
+        </tr>
+        <tr class="row-odd">
+            <td>04</td>
+            <td>Stalwart Shell</td>
+            <td>CHARM_NAME_4</td>
+            <td>None</td>
+        </tr>
+        <tr class="row-even">
+            <td>05</td>
+            <td>Baldur Shell</td>
+            <td>CHARM_NAME_5</td>
+            <td>None</td>
+        </tr>
+        <tr class="row-odd">
+            <td>06</td>
+            <td>Fury of the Fallen</td>
+            <td>CHARM_NAME_6</td>
+            <td>None</td>
+        </tr>
+        <tr class="row-even">
+            <td>07</td>
+            <td>Quick Focus</td>
+            <td>CHARM_NAME_7</td>
+            <td>None</td>
+        </tr>
+        <tr class="row-odd">
+            <td>08</td>
+            <td>Lifeblood Heart</td>
+            <td>CHARM_NAME_8</td>
+            <td>None</td>
+        </tr>
+        <tr class="row-even">
+            <td>09</td>
+            <td>Lifeblood Core</td>
+            <td>CHARM_NAME_9</td>
+            <td>None</td>
+        </tr>
+        <tr class="row-odd">
+            <td>10</td>
+            <td>Defender’s Crest</td>
+            <td>CHARM_NAME_10</td>
+            <td>None</td>
+        </tr>
+        <tr class="row-even">
+            <td>11</td>
+            <td>Flukenest</td>
+            <td>CHARM_NAME_11</td>
+            <td>None</td>
+        </tr>
+        <tr class="row-odd">
+            <td>12</td>
+            <td>Thorns of Agony</td>
+            <td>CHARM_NAME_12</td>
+            <td>None</td>
+        </tr>
+        <tr class="row-even">
+            <td>13</td>
+            <td>Mark of Pride</td>
+            <td>CHARM_NAME_13</td>
+            <td>None</td>
+        </tr>
+        <tr class="row-odd">
+            <td>14</td>
+            <td>Steady Body</td>
+            <td>CHARM_NAME_14</td>
+            <td>None</td>
+        </tr>
+        <tr class="row-even">
+            <td>15</td>
+            <td>Heavy Blow</td>
+            <td>CHARM_NAME_15</td>
+            <td>None</td>
+        </tr>
+        <tr class="row-odd">
+            <td>16</td>
+            <td>Sharp Shadow</td>
+            <td>CHARM_NAME_16</td>
+            <td>None</td>
+        </tr>
+        <tr class="row-even">
+            <td>17</td>
+            <td>Spore Shroom</td>
+            <td>CHARM_NAME_17</td>
+            <td>None</td>
+        </tr>
+        <tr class="row-odd">
+            <td>18</td>
+            <td>Longnail</td>
+            <td>CHARM_NAME_18</td>
+            <td>None</td>
+        </tr>
+        <tr class="row-even">
+            <td>19</td>
+            <td>Shaman Stone</td>
+            <td>CHARM_NAME_19</td>
+            <td>None</td>
+        </tr>
+        <tr class="row-odd">
+            <td>20</td>
+            <td>Soul Catcher</td>
+            <td>CHARM_NAME_20</td>
+            <td>None</td>
+        </tr>
+        <tr class="row-even">
+            <td>21</td>
+            <td>Soul Eater</td>
+            <td>CHARM_NAME_21</td>
+            <td>None</td>
+        </tr>
+        <tr class="row-odd">
+            <td>22</td>
+            <td>Glowing Womb</td>
+            <td>CHARM_NAME_22</td>
+            <td>None</td>
+        </tr>
+        <tr class="row-even">
+            <td rowspan="3">23</td>
+            <td>Fragile Heart</td>
+            <td>CHARM_NAME_23</td>
+            <td>None</td>
+        </tr>
+        <tr class="row-odd">
+            <td>Fragile Heart (Repair)</td>
+            <td>CHARM_NAME_23_BRK</td>
+            <td>brokenCharm_23</td>
+        </tr>
+        <tr class="row-even">
+            <td>Unbreakable Heart</td>
+            <td>CHARM_NAME_23_G</td>
+            <td>fragileHeart_unbreakable</td>
+        </tr>
+        <tr class="row-odd">
+            <td rowspan="3">24</td>
+            <td>Fragile Greed</td>
+            <td>CHARM_NAME_24</td>
+            <td>None</td>
+        </tr>
+        <tr class="row-even">
+            <td>Fragile Greed (Repair)</td>
+            <td>CHARM_NAME_24_BRK</td>
+            <td>brokenCharm_24</td>
+        </tr>
+        <tr class="row-odd">
+            <td>Unbreakable Greed</td>
+            <td>CHARM_NAME_24_G</td>
+            <td>fragileGreed_unbreakable</td>
+        </tr>
+        <tr class="row-even">
+            <td rowspan="3">25</td>
+            <td>Fragile Strength</td>
+            <td>CHARM_NAME_25</td>
+            <td>None</td>
+        </tr>
+        <tr class="row-odd">
+            <td>Fragile Strength (Repair)</td>
+            <td>CHARM_NAME_25_BRK</td>
+            <td>brokenCharm_25</td>
+        </tr>
+        <tr class="row-even">
+            <td>Unbreakable Strength</td>
+            <td>CHARM_NAME_25_G</td>
+            <td>fragileStrength_unbreakable</td>
+        </tr>
+        <tr class="row-odd">
+            <td>26</td>
+            <td>Nailmaster’s Glory</td>
+            <td>CHARM_NAME_26</td>
+            <td>None</td>
+        </tr>
+        <tr class="row-even">
+            <td>27</td>
+            <td>Joni’s Blessing</td>
+            <td>CHARM_NAME_27</td>
+            <td>None</td>
+        </tr>
+        <tr class="row-odd">
+            <td>28</td>
+            <td>Shape of Unn</td>
+            <td>CHARM_NAME_28</td>
+            <td>None</td>
+        </tr>
+        <tr class="row-even">
+            <td>29</td>
+            <td>Hiveblood</td>
+            <td>CHARM_NAME_29</td>
+            <td>None</td>
+        </tr>
+        <tr class="row-odd">
+            <td>30</td>
+            <td>Dream Wielder</td>
+            <td>CHARM_NAME_30</td>
+            <td>None</td>
+        </tr>
+        <tr class="row-even">
+            <td>31</td>
+            <td>Dashmaster</td>
+            <td>CHARM_NAME_31</td>
+            <td>None</td>
+        </tr>
+        <tr class="row-odd">
+            <td>32</td>
+            <td>Quick Slash</td>
+            <td>CHARM_NAME_32</td>
+            <td>None</td>
+        </tr>
+        <tr class="row-even">
+            <td>33</td>
+            <td>Spell Twister</td>
+            <td>CHARM_NAME_33</td>
+            <td>None</td>
+        </tr>
+        <tr class="row-odd">
+            <td>34</td>
+            <td>Deep Focus</td>
+            <td>CHARM_NAME_34</td>
+            <td>None</td>
+        </tr>
+        <tr class="row-even">
+            <td>35</td>
+            <td>Grubberfly’s Elegy</td>
+            <td>CHARM_NAME_35</td>
+            <td>None</td>
+        </tr>
+        <tr class="row-odd">
+            <td rowspan="3">36</td>
+            <td>White Fragment</td>
+            <td>CHARM_NAME_36_A</td>
+            <td rowspan="2">royalCharmState</td>
+        </tr>
+        <tr class="row-even">
+            <td>Kingsoul</td>
+            <td>CHARM_NAME_36_B</td>
+        </tr>
+        <tr class="row-odd">
+            <td>Void Heart</td>
+            <td>CHARM_NAME_36_C</td>
+            <td>gotShadeCharm</td>
+        </tr>
+        <tr class="row-even">
+            <td>37</td>
+            <td>Sprintmaster</td>
+            <td>CHARM_NAME_37</td>
+            <td>None</td>
+        </tr>
+        <tr class="row-odd">
+            <td>38</td>
+            <td>Dreamshield</td>
+            <td>CHARM_NAME_38</td>
+            <td>None</td>
+        </tr>
+        <tr class="row-even">
+            <td>39</td>
+            <td>Weaversong</td>
+            <td>CHARM_NAME_39</td>
+            <td>None</td>
+        </tr>
+        <tr class="row-odd">
+            <td rowspan="2">40</td>
+            <td>Grimmchild</td>
+            <td>CHARM_NAME_40</td>
+            <td rowspan="2">grimmChildLevel</td>
+        </tr>
+        <tr class="row-even">
+            <td>Carefree Melody</td>
+            <td>CHARM_NAME_40_N</td>
+        </tr>
+    </tbody>
+</table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/hk-modding/api/blob/docs/articles/charms.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
